@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <link href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAVVVVAKqqqgD///8AIiIiAHd3dwDMzMwAREREAJmZmQDu7u4AERERAGZmZgAzMzMAiIiIAN3d3QAAAAAAMzMzMzMzMzM4TghAeACKwzhODHmgzBDjOKYHeaR94OM4oEZAdQBAczhDMzMzM+DjMzMzMzMzO+MzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzM0hwTkDcBNDjTal1wgCAgONNqXVyrUCA40hwTkDRCuDjSDMzMzMz4OMzMzMzMzMzMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" rel="icon" type="image/x-icon" />	
+    <link rel="icon" type="image/ico" href="/public/images/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.ckeditor.com/4.15.1/full/ckeditor.js"></script>
+    <link  href="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js">
+    
+    <title>Dev en Dev</title>
+</head>
+<body>
+    <div class="divdeOuf">
+        <div class="confirmModal">
+            <div id="confirmLog" class="mask"></div>
+        </div>   
+        <div id="modifModal" class="mask">
+            
+            <form action="/modifQuestion"  class="modifForm" method="post" enctype="multipart/form-data">
+            
+                <textarea name="share" id="share" cols="30" rows="1"></textarea> 
+                 <label  for="laModif">Modifier</label>
+               <textarea  name="laModif" id="laModif" cols="90" rows="10"></textarea>
+               <textarea name="bt64" id="bt64" cols="30" rows="10"></textarea>
+               <input type="file" name="uploadModif" onchange="convertTo642()" id="uploadModif">
+                
+                <div class="modifControl">
+                    <input  class="modif" type="submit" value="Modifier">
+                    <input class="annul" type="button" value="Annuler">
+        
+                </div>
+                
+            </form>
+           
+        </div>
+
+
+        
+        
+
+        
+        <div id="replyBox" class="offCreate"><!--offCreate-->
+            <form action="/reply" id="replyForm" class="formSubject" method="post" enctype="multipart/form-data">
+                <h2  id="titleReply">Réponse</h2>
+                <textarea name="pseudo" id="pseudoPost" cols="30" rows="1"></textarea> 
+                <label class="mask" for="titreReponse">Titre</label>
+                <textarea  name="titreReponse" class="mask" id="test2" cols="30" rows="2"></textarea>
+                <textarea id="rep" name="response" class="" rows="10" cols="90"></textarea>
+                <textarea class="mask" name="t64" id="t64" cols="30" rows="1"></textarea>
+                <input type="file" onchange="convertTo643()" name="repImg" id="repImg">
+                <div class="createControl">
+                    <input id="okReply" class="createBtn" type="submit" value="Créer">
+                    <input id="cancelReply" class="cancelreply" type="button" value="Annuler">
+        
+                </div>
+                
+            </form>
+            
+        </div>
+        <%-include('partials/cgu.ejs'); -%>
+    
+        <%-include('partials/topBar.ejs'); -%> 
+    
+        <div id="lateral" class="lateral">
+        <%-include('partials/topBarMobile.ejs'); -%>
+        <%-include('partials/theme.ejs'); -%>
+    
+    
+    
+        
+         <div id="modalContact" class="maskContact">
+            <a href="https://www.facebook.com/profile.php?id=100008466600174"><img  class="fb" src="/images/fb.png" width="20%" alt="">Facebook</a>
+            <a class="twitter" href="https://twitter.com/MorganPicard2"><img id="fckTwitter" class="imgContact" src="/images/twitter.png" width="25%" alt=""> Twitter</a>
+            <a href="https://github.com/mangozmorgan" class="gitContact"><img id="fckGit" class="imgContact" src="/images/gitColor.png" width="30%" alt=""> Github</a>
+        </div>
+        
+        <div id="modalTuto" class="maskTuto">
+            <a href="tuto1.html">Tuto 1</a>
+            <a href="tuto2.html">Tuto 2</a>
+            <a href="tuto3.html">Tuto 3</a>
+        </div>
+        
+        <div id="modalProjet" class="maskProjet">
+            <a href="projet1.html">Projet 1</a>
+            <a href="projet2.html">Projet 2</a>
+            <a href="projet3.html">Projet 3</a>
+        </div>
+    
+        <%-include('partials/modalRegister.ejs'); -%>
+    
+        
+        
+        
+        
+        <%-include('partials/modalLogin.ejs'); -%>
+    
+    
+    
+        
+    
+        <div id="modalContact" class="maskContact">
+            <a href="https://www.facebook.com/profile.php?id=100008466600174"><img  class="fb" src="/images/fb.png" width="20%" alt="">Facebook</a>
+            <a class="twitter" href="https://twitter.com/MorganPicard2"><img id="fckTwitter" class="imgContact" src="/images/twitter.png" width="25%" alt=""> Twitter</a>
+            <a href="https://github.com/mangozmorgan" class="gitContact"><img id="fckGit" class="imgContact" src="/images/gitColor.png" width="30%" alt=""> Github</a>
+        </div>
+    
+     
+    
+        
+    
+        
+        <div class="banniere" id="banniere">
+            
+               
+                    
+            <div id="openVolet" class="openVolet" onclick="volet()"></div>               
+           
+    
+            <div class="html kill" id="htmlLogo"  ><img id="imgHtml" src="/images/htmlWht.png" width="73%" alt="" srcset=""></div>
+            <div class="css kill"><img id="imgCss" src="/images/cssWht.png" width="73%" alt="" srcset=""></div>
+            <div class="js kill"><img id="imgJs" src="/images/jsWht.png" width="73%" alt="" srcset=""></div>
+
+            <div class="comp "id="active">
+                <div class="geerAnim">               
+                    <img  src="/images/geer3.png" width="40%" alt="geerAnim" >                           
+                </div>
+                <div class="dedlogo "><img id='dedlogo' src="/images/help.png" width="60%"  alt=""> </div>
+                <div class="atomeOff kill" id="animAtome">
+                    <div class="atome kill"><img src="/images/atome.png" width="20%" alt="" srcset=""></div>            
+                </div>
+                
+                <div class="atomeOff kill" id="animAtome2">
+                    <div class="atome2"><img src="/images/atome.png" width="20%" alt="" srcset=""></div>            
+                </div> 
+
+            </div>
+            <div class="dedMob"><div class="newLog"><img src="/images/logoIllustrator3.png" width="75%" alt="devLogo" ></div></div>
+            <div class="search"><img src="/images/search.png" width="80%" alt="search" srcset=""></div>
+            <div class="mongo kill"><img id="imgMongo" src="/images/mongoWht.png" width="73%" alt=""></div>
+
+            <div class="node kill"><img id="imgNode" src="/images/nodeWht.png" width="73%" alt="" srcset=""></div>
+            <div class="git kill" id="git"><img id="imgGit" src="/images/githWht.png" width="73%" alt="" srcset=""></div>
+    </div>
+        
+        
+    
+    <div class="container2" id="container">
+        <div class="cadre2" id="contenu">
+            <div id="h3Questions" class="h3Questions"> <h3>Vos Questions</h3></div>
+           
+            
+            <div id="modalSubject" class="offCreate">
+                <form id="formSubject" action="/postQuestions" class="formSubject" method="post" enctype="multipart/form-data">
+                    
+                    <h2 id="titleForm">Créer un nouveau sujet</h2>
+                    <label id="titleForm1" for="titre">Titre du sujet</label>
+                    <textarea  type="text" name="title" rows="0" cols="60"  id="titleSubject"></textarea>                    
+                    <label id="titleForm2" class="titleForm" for="sujet">Commentaires</label>
+                    <textarea  name="sujet" class="commentSubject" rows="10" cols="60"></textarea>
+                    <input type="file" name="upload" onchange="convertTo64()" id="uploadBtn">
+                    <textarea name="bt64converted" id="bt64converted" cols="30" rows="10"></textarea>
+                    <textarea name="pseudoForm" id="pseudoForm"></textarea>
+                    <div class="createControl">
+                        <input class="createBtn" id="okCreate" type="submit" value="Créer">
+                        <input id="cancelCreate" type="button" value="Annuler">
+                        
+                    </div>
+                    
+                    
+                </form>
+            </div>
+
+           
+
+           
+
+
+            <div  class="vosQuestions" id="vosQuestions" >
+                
+                <% for(var i = 0; i < collectionName.length; i++) {%>
+                    
+                <div class="result">
+                    
+                    <span id="titreResultat" class="titreResultat"><%=collectionName[i].title%><span class="aCut2"><%=collectionName[i].pseudo%></span> </span>
+                    
+                    <div id="commentQuestions" class="commentOff">
+
+                            
+                            <p class="comment"><%-collectionName[i].commentaire%></p> 
+
+                            <p class="paraB64" name="paraB64"></p>
+                            <div class="imgUp">
+                                <img src="<%-collectionName[i].fichiers%>" width="70%" alt="" srcset="">
+                            </div>
+                        
+                           
+                        <div class="trait"></div>
+                        <p class="repreprep ">Réponses</p>
+                        
+                        <% var replyArray = collectionName[i].reponse
+                        if(replyArray == null){
+                           let nothing="1" 
+                        }else{for(var a of replyArray){
+                            let test = a
+                            
+                            %><p id="aCut" class="repArray comment aCut"><%=a%></p><%
+                         }}
+                         
+                         
+                        
+                        %>
+                        
+                        
+                       
+                        
+                        <div class="confirmSupp">Etes-vous sûr de vouloir supprimer cet article ? 
+                            <form action="/removeQuestions" method="post" enctype="multipart/form-data">
+                                <label for="titleRemove"></label>
+                                <textarea name="titleRemove" class="titleRemove"  cols="30" rows="1"></textarea>
+                                <button class="btnVal" type="submit" ></button>
+                                <button type="button" class="btnCancel" ></button>
+                            </form>
+                        </div>   
+                           
+                
+                        <div id="test" class="reprep">
+                            <input  id="repBtn"  class="repondre btnRep" type="button" value="Répondre">
+                            <div class="mask">
+                                <input type="button" value="Modifier" class="modifBtn" >
+                                    
+                                    <input id="deletedBtn" type="submit" value="Supprimer"  class="deletedBtn">
+                               
+                                
+                             </div>
+                        </div>
+                        
+                        
+                    </div>
+                   
+                </div>
+                
+                
+                <%} %>
+               
+                <div id="needLog" class="needLog ">Vous devez être connecté pour poster sur le forum </div>
+                <div class="containButton">
+                    <div id="createSubjectQuestions" class="mask ">
+                        <img id="plusSubject" src="images/plus.png" width="3%" alt="+">                    
+                        <span onclick="putPseudo()">Créer un nouveau post</span>
+                    </div>
+                </div>
+                    
+            </div>
+
+            
+            
+            
+          
+                
+                
+            </div>
+        </div>
+    </div>
+    
+
+ 
+<script src="followTheme.js"></script>
+<script src="effect.js"></script>
+<script src="effetEntreAide.js"></script> 
+<script src="themeController.js"></script>
+<script src="cookies.js"></script>  
+
+
+<script>CKEDITOR.replace( 'sujet' );</script>
+<script>CKEDITOR.replace( 'laModif' );</script>
+
+<script src="toBase64.js"></script>
+<script>let pseudo = recupererCookie("name")	
+	let date = new Date();
+	let options = {weekday: "long", year: "numeric", month: "numeric", day: "2-digit",hour:"numeric",minute:"numeric"};
+	let datePost =(date.toLocaleDateString("fr-FR", options));
+	document.getElementById("pseudoPost").innerHTML="//"+ pseudo +"~~"+datePost
+
+
+
+	let pseudo2 = recupererCookie("name")
+	
+	let date2 = new Date();
+	let options2 = {weekday: "long", year: "numeric", month: "numeric", day: "2-digit",hour:"numeric",minute:"numeric"};
+	let datePost2 =(date.toLocaleDateString("fr-FR", options));
+	document.getElementById("pseudoForm").textContent="//"+ pseudo2 +"~~"+datePost2</script>
+<script>
+    let createSubjectQuestions = document.getElementById("createSubjectQuestions")
+    let postAuthorisation = recupererCookie("Login")
+    let replyButton =document.getElementsByClassName("btnRep")
+    let needLog = document.getElementById("needLog")
+
+    
+    if(postAuthorisation ==="logYes"){
+        for(let i = 0 ; i<replyButton.length;i++){
+             replyButton[i].classList.replace("mask","repondre")
+        }
+        createSubjectQuestions.className = "createSubject"
+        replyButton.className="repondre"
+        needLog.className = "mask"
+    }else{
+        for(let i = 0 ; i<replyButton.length;i++){
+             replyButton[i].classList.replace("repondre","mask")
+        }
+        createSubjectQuestions.className = "mask"
+        
+        needLog.className = "needLog"
+    }
+</script>
+</body>
+</html>
+

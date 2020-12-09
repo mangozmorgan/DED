@@ -1,0 +1,192 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/public/style.css">
+    <title>Dev en Dev</title>
+</head>
+<body>
+    
+
+    <div class="topBar" id="topBar">
+       <div class="leftBloc">
+            <a  href="/" class="acceuil"><img src="/images/logol.png" width="45%" alt="" srcset=""></a>
+            <a class="about" href="about">DED c'est quoi ?</a>
+            <input id="girly" onclick="girlyTheme()" type="button" value= >
+            <input id="green" onclick="greenTheme()" type="button" value= >
+            <input id="sobre" type="button" onclick="sobreTheme()" value="">
+            
+        </div>
+
+        <div class="rightBloc">
+            
+            <a class="link" id="help" href="help">L'entre-aide</a>
+             <a class="link" id="projet" href="projets">Mes projets</a>
+             <a class="link" id="tutos" href="tutos">Les tutos</a>
+             <div class="link" id="contactLink">Contacts</div> 
+             
+             <div class="logg" id="logg">
+                <input type="button" class="inscScrollBarr" onclick="inscription()" value="Inscription">
+                <input type="button" class="loginScrollBarr" onclick="login()" id="btnLogin" value="Se connecter">
+            </div>   
+         </div>
+     </div>
+    
+     <div id="modalContact" class="maskContact">
+        <a href="https://www.facebook.com/profile.php?id=100008466600174"><img  class="fb" src="/images/fb.png" width="20%" alt="">Facebook</a>
+        <a class="twitter" href="https://twitter.com/MorganPicard2"><img id="fckTwitter" class="imgContact" src="/images/twitter.png" width="25%" alt=""> Twitter</a>
+        <a href="https://github.com/mangozmorgan" class="gitContact"><img id="fckGit" class="imgContact" src="/images/gitColor.png" width="30%" alt=""> Github</a>
+    </div>
+    
+    <div id="modalTuto" class="maskTuto">
+        <a href="tuto1.html">Tuto 1</a>
+        <a href="tuto2.html">Tuto 2</a>
+        <a href="tuto3.html">Tuto 3</a>
+    </div>
+    
+    <div id="modalProjet" class="maskProjet">
+        <a href="projet1.html">Projet 1</a>
+        <a href="projet2.html">Projet 2</a>
+        <a href="projet3.html">Projet 3</a>
+    </div>
+
+    <div class="maskRegister" id="modalRegister">
+        <form class="login" action="/register" method="post">
+            <h2>Inscription rapide</h2>
+            <label for="login">Nom d'utilisateur :</label>
+            <input class="inputForm" type="text" name="pseudo" id="pseudo">
+            <label for="Email">Adresse email :</label>
+            <input class="inputForm" type="email" name="email" id="email">
+            <label for="pwd">Mot de passe :</label>
+            <input class="inputForm" type="password" name="pwd" id="pwd">
+            <label for="pwdConfirm">Confirmation du mot de passe :</label>
+            <input class="inputForm" type="password" name="pwdConfirm" id="pwdConfirm">
+            <div class="containBtn">
+                <input class="inscr" type="submit" value="S'inscrire">
+                <input class="annul" onclick="annul()" type="button" value="Annuler">
+            </div>    
+        </form>
+    </div>
+
+    <div class="divLogin" id="divLogin">
+       
+        <form class="maskLogin" id="modalLogin" action="/login" method="post">
+            <h3>Connexion</h3>
+            <label for="mail">Adresse Email :</label>
+            <input type="email" name="mail" id="mail">
+            <label for="pwdLogin">Mot de passe :</label>
+            <input type="password" name="pwdLogin" id="pwdLogin">
+            <input type="button"  value="Connexion" id="btnSendLogin">
+        </form>
+    </div>
+
+    
+
+       
+
+
+
+    
+
+    <div id="modalContact" class="maskContact">
+        <a href="https://www.facebook.com/profile.php?id=100008466600174"><img  class="fb" src="/images/fb.png" width="20%" alt="">Facebook</a>
+        <a class="twitter" href="https://twitter.com/MorganPicard2"><img id="fckTwitter" class="imgContact" src="/images/twitter.png" width="25%" alt=""> Twitter</a>
+        <a href="https://github.com/mangozmorgan" class="gitContact"><img id="fckGit" class="imgContact" src="/images/gitColor.png" width="30%" alt=""> Github</a>
+    </div>
+
+
+    
+
+    
+    <div class="banniere" id="banniere">
+        
+        <div class="html" id="htmlLogo"  ><img id="imgHtml" src="/images/htmlWht.png" width="73%" alt="" srcset=""></div>
+        <div class="css"><img id="imgCss" src="/images/cssWht.png" width="73%" alt="" srcset=""></div>
+        <div class="js"><img id="imgJs" src="/images/jsWht.png" width="73%" alt="" srcset=""></div>
+    
+        <div class="comp">
+            <div class="geerAnim">               
+                <img  src="/images/geer3.png" width="40%" alt="geerAnim" >                           
+            </div>
+            <div class="dedlogo"><img id='dedlogo' src="/images/help.png" width="60%"  alt=""> </div>
+            
+    
+            
+        </div>
+        <div class="mongo"><img id="imgMongo" src="/images/mongoWht.png" width="73%" alt=""></div>
+    
+    <div class="node"><img id="imgNode" src="/images/nodeWht.png" width="73%" alt="" srcset=""></div>
+    <div class="git" id="git"><img id="imgGit" src="/images/githWht.png" width="73%" alt="" srcset=""></div>
+    </div>
+    
+    <div class="container2" id="container">
+        <div class="cadre">
+            
+            <div class="modalCadreSubject">
+                <form action="createSubject" class="formSubject" method="post">
+                    <label for="titre">Titre du sujet</label>
+                    <input type="text" name="title" id="titleSubject">
+                    <label for="sujet">Commentaires</label>
+                    <input type="text" name="sujet" id="commentSubject">
+                </form>
+            </div>
+
+
+            <div class="vosQuestions">
+                <div id="questions" class="questions">
+                    <div class="questionTitle">
+                    <h3  id="vosQuestions"><img id="plusQuestionsPng" width="10%" src="/public/images/plus.png" width="1%" alt="+" srcset=""> Vos questions</h3>
+                </div>
+                    <div id="subjectDiv" class="subjectOff">
+                        <div class="sub">
+                            <a href="">Probleme n1</a>
+                            <a href="">Probleme n2</a>
+                            <a href="">Probleme n3</a>
+                        </div>    
+                        <div id="createSubject" class="createSubject">
+                                <img id="plusSubject" src="/public/images/plus.png" width="6%" alt="+">                    
+                                <span>Créer un nouveau post</span>
+                        </div>
+                    </div>
+                    
+            </div>
+            <div class="vosQuestions">
+                <div id="questions" class="questions">
+                    <div class="questionTitle">
+                    <h3  id="vosAstuces"><img id="plusAstuces" width="10%" src="/public/images/plus.png" width="1%" alt="+" srcset=""> Vos astuces</h3>
+                </div>
+                    <div id="astucesDiv" class="subjectOff">
+                        <div class="sub">
+                            <a href="">Astuces n1</a>
+                            <a href="">Astuces n2</a>
+                            <a href="">Astuces n3</a>
+                        </div>    
+                        <div id="createAstuces" class="createSubject">
+                                <img id="plusAstucesBtn" src="/public/images/plus.png" width="6%" alt="+">                    
+                                <span>Créer un nouveau post</span>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <!--
+                <h3><img src="/public/images/plus.png" width="1%" alt="+" srcset=""> Vos astuces</h3>
+                <h3><img src="/public/images/plus.png" width="1%" alt="+" srcset=""> Vos créas</h3>
+                <h3><img src="/public/images/plus.png" width="1%" alt="+" srcset=""> Vos idées</h3>
+                <h3><img src="/public/images/plus.png" width="1%" alt="+" srcset=""> Undefined Section</h3>-->
+                
+            </div>
+        </div>
+    </div>
+
+
+
+<script src="/public/followTheme.js"></script>
+<script src="/public/effect.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <title>Dev en Dev</title>
+</head>
+<body>
+    <div class="divdeOuf">
+        <%-include('partials/cgu.ejs'); -%>
+        
+    
+        <%-include('partials/topBar.ejs'); -%> 
+    
+    <div id="lateral" class="lateral">
+        <%-include('partials/topBarMobile.ejs'); -%>
+        <%-include('partials/theme.ejs'); -%>
+    
+    
+    
+        
+         <div id="modalContact" class="maskContact">
+            <a href="https://www.facebook.com/profile.php?id=100008466600174"><img  class="fb" src="/images/fb.png" width="20%" alt="">Facebook</a>
+            <a class="twitter" href="https://twitter.com/MorganPicard2"><img id="fckTwitter" class="imgContact" src="/images/twitter.png" width="25%" alt=""> Twitter</a>
+            <a href="https://github.com/mangozmorgan" class="gitContact"><img id="fckGit" class="imgContact" src="/images/gitColor.png" width="30%" alt=""> Github</a>
+        </div>
+        
+        <div id="modalTuto" class="maskTuto">
+            <a href="tuto1.html">Tuto 1</a>
+            <a href="tuto2.html">Tuto 2</a>
+            <a href="tuto3.html">Tuto 3</a>
+        </div>
+        
+        <div id="modalProjet" class="maskProjet">
+            <a href="projet1.html">Projet 1</a>
+            <a href="projet2.html">Projet 2</a>
+            <a href="projet3.html">Projet 3</a>
+        </div>
+    
+        <div class="maskRegister" id="modalRegister">
+            <form class="login" action="/register" method="post">
+                <h2>Inscription rapide</h2>
+                <label for="login">Nom d'utilisateur :</label>
+                <input class="inputForm" type="text" name="pseudo" id="pseudo">
+                <label for="Email">Adresse email :</label>
+                <input class="inputForm" type="email" name="email" id="email">
+                <label for="pwd">Mot de passe :</label>
+                <input class="inputForm" type="password" name="pwd" id="pwd">
+                <label for="pwdConfirm">Confirmation du mot de passe :</label>
+                <input class="inputForm" type="password" name="pwdConfirm" id="pwdConfirm">
+                <div class="containBtn">
+                    <input class="inscr" type="submit" value="S'inscrire">
+                    <input class="annul" onclick="annul()" type="button" value="Annuler">
+                </div>    
+            </form>
+        </div>
+    
+        <div class="divLogin" id="divLogin">
+           
+            <form class="maskLogin" id="modalLogin" action="/login" method="post">
+                <h3>Connexion</h3>
+                <label for="mail">Adresse Email :</label>
+                <input type="email" name="mail" id="mail">
+                <label for="pwdLogin">Mot de passe :</label>
+                <input type="password" name="pwdLogin" id="pwdLogin">
+                <input type="submit"  value="Connexion" id="btnSendLogin">
+            </form>
+        </div>
+    
+        
+    
+           
+    
+    
+    
+        
+    
+        <div id="modalContact" class="maskContact">
+            <a href="https://www.facebook.com/profile.php?id=100008466600174"><img  class="fb" src="/images/fb.png" width="20%" alt="">Facebook</a>
+            <a class="twitter" href="https://twitter.com/MorganPicard2"><img id="fckTwitter" class="imgContact" src="/images/twitter.png" width="25%" alt=""> Twitter</a>
+            <a href="https://github.com/mangozmorgan" class="gitContact"><img id="fckGit" class="imgContact" src="/images/gitColor.png" width="30%" alt=""> Github</a>
+        </div>
+    
+     
+    
+        
+    
+        
+        <div class="banniere" id="banniere">
+            
+               
+                    
+                        <div id="openVolet" class="openVolet" onclick="volet()"></div>               
+                       
+                
+            <div class="html kill" id="htmlLogo"  ><img id="imgHtml" src="/images/htmlWht.png" width="73%" alt="" srcset=""></div>
+            <div class="css kill"><img id="imgCss" src="/images/cssWht.png" width="73%" alt="" srcset=""></div>
+            <div class="js kill"><img id="imgJs" src="/images/jsWht.png" width="73%" alt="" srcset=""></div>
+        
+            <div class="comp "id="active">
+                <div class="geerAnim">               
+                    <img  src="/images/geer3.png" width="40%" alt="geerAnim" >                           
+                </div>
+                <div class="dedlogo "><img id='dedlogo' src="/images/ded logo.png" width="60%"  alt=""> </div>
+                <div class="atomeOff kill" id="animAtome">
+                    <div class="atome kill"><img src="/images/atome.png" width="20%" alt="" srcset=""></div>            
+                </div>
+                
+                <div class="atomeOff kill" id="animAtome2">
+                    <div class="atome2"><img src="/images/atome.png" width="20%" alt="" srcset=""></div>            
+                </div> 
+    
+            </div>
+            <div class="dedMob"><div class="newLog"><img src="/images/logoIllustrator3.png" width="75%" alt="devLogo" ></div></div>
+            <div class="search"><img src="/images/search.png" width="80%" alt="search" srcset=""></div>
+            <div class="mongo kill"><img id="imgMongo" src="/images/mongoWht.png" width="73%" alt=""></div>
+        
+        <div class="node kill"><img id="imgNode" src="/images/nodeWht.png" width="73%" alt="" srcset=""></div>
+        <div class="git kill" id="git"><img id="imgGit" src="/images/githWht.png" width="73%" alt="" srcset=""></div>
+        </div>
+        
+        
+    
+    <div class="container" id="container">
+        <p><%=loginError%></p>
+
+
+
+<script src="followTheme.js"></script>
+<script src="effect.js"></script>
+<script src="cookies.js"></script>
+<script type="text/javascript" language="javascript">
+    var la_couleur='';
+    
+    la_couleur = recupererCookie('firstCookie');
+    
+    
+    if(la_couleur!='' && la_couleur!='inconnu')
+    mef(la_couleur);
+    function mef(couleur)
+    {	
+        let topBar = document.getElementById('topBar');
+        let banniere = document.getElementById('banniere');
+        let paragraphe = document.getElementById('contenu')
+        let lien = document.getElementsByClassName("pink")
+        
+        if(couleur === 'girly'){
+            for(let i=0 ;i<lien.length;i++){
+                lien[i].style.color = "rgba(238,174,202,1)"
+            }
+            
+            
+            topBar.style.background="linear-gradient(180deg, rgba(47,54,64,1) 0%, rgba(0,0,0,0.8183648459383753) 100%, rgba(255,255,255,1) 100%)";
+            
+            banniere.style.background="radial-gradient(circle, rgba(238,174,202,1) 18%, rgba(148,187,233,1) 100%)";
+            document.body.style.background = "rgb(245, 246, 250)"
+            paragraphe.style.color = "RGBA(60,67,77,0.9)"
+        }else if(couleur === 'green'){
+            for(let i=0 ;i<lien.length;i++){
+                lien[i].style.color = "#ffffff"
+            }
+            topBar.style.background="linear-gradient(180deg, rgba(52,73,94,1) 21%, rgba(86,110,135,1) 100%)";
+            
+            banniere.style.background="linear-gradient(182deg,#a5cc7c, rgba(105, 143, 63,0.8))";
+            document.body.style.background = "rgb(245, 246, 250)"
+            paragraphe.style.color = "RGBA(60,67,77,0.9)"
+        }else if (couleur === 'dark'){
+            for(let i=0 ;i<lien.length;i++){
+                lien[i].style.color = "#ffffff"
+            }
+            topBar.style.background="linear-gradient(180deg, rgba(47,54,64,1) 0%, rgba(0,0,0,0.8183648459383753) 100%, rgba(255,255,255,1) 100%)";
+            
+            banniere.style.background="linear-gradient(180deg, rgba(87,101,116,1) 0%, rgba(0,0,0,0.8183648459383753) 100%, rgba(255,255,255,1) 100%)";
+
+            document.body.style.background = "rgba(34, 47, 62)"
+
+            paragraphe.style.color = "rgba(245, 246, 250)"
+
+
+
+            
+        }
+          
+        
+        creerCookie('firstCookie', couleur, '15');
+    }
+    
+    </script>
+
+
+</body>
+</html>

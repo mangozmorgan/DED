@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <title>Dev en Dev</title>
+</head>
+<body>
+    <div class="divdeOuf">
+        <%-include('partials/cgu.ejs'); -%>
+        
+    
+        <%-include('partials/topBar.ejs'); -%> 
+    
+    <div id="lateral" class="lateral">
+        <%-include('partials/topBarMobile.ejs'); -%>
+        <%-include('partials/theme.ejs'); -%>
+    
+    
+    
+        
+         <div id="modalContact" class="maskContact">
+            <a href="https://www.facebook.com/profile.php?id=100008466600174"><img  class="fb" src="/images/fb.png" width="20%" alt="">Facebook</a>
+            <a class="twitter" href="https://twitter.com/MorganPicard2"><img id="fckTwitter" class="imgContact" src="/images/twitter.png" width="25%" alt=""> Twitter</a>
+            <a href="https://github.com/mangozmorgan" class="gitContact"><img id="fckGit" class="imgContact" src="/images/gitColor.png" width="30%" alt=""> Github</a>
+        </div>
+        
+        <div id="modalTuto" class="maskTuto">
+            <a href="tuto1.html">Tuto 1</a>
+            <a href="tuto2.html">Tuto 2</a>
+            <a href="tuto3.html">Tuto 3</a>
+        </div>
+        
+        <div id="modalProjet" class="maskProjet">
+            <a href="projet1.html">Projet 1</a>
+            <a href="projet2.html">Projet 2</a>
+            <a href="projet3.html">Projet 3</a>
+        </div>
+    
+        <div class="maskRegister" id="modalRegister">
+            <form class="login" action="/register" method="post">
+                <h2>Inscription rapide</h2>
+                <label for="login">Nom d'utilisateur :</label>
+                <input class="inputForm" type="text" name="pseudo" id="pseudo">
+                <label for="Email">Adresse email :</label>
+                <input class="inputForm" type="email" name="email" id="email">
+                <label for="pwd">Mot de passe :</label>
+                <input class="inputForm" type="password" name="pwd" id="pwd">
+                <label for="pwdConfirm">Confirmation du mot de passe :</label>
+                <input class="inputForm" type="password" name="pwdConfirm" id="pwdConfirm">
+                <div class="containBtn">
+                    <input class="inscr" type="submit" value="S'inscrire">
+                    <input class="annul" onclick="annul()" type="button" value="Annuler">
+                </div>    
+            </form>
+        </div>
+    
+        <div class="divLogin" id="divLogin">
+           
+            <form class="maskLogin" id="modalLogin" action="/login" method="post">
+                <h3>Connexion</h3>
+                <label for="mail">Adresse Email :</label>
+                <input type="email" name="mail" id="mail">
+                <label for="pwdLogin">Mot de passe :</label>
+                <input type="password" name="pwdLogin" id="pwdLogin">
+                <input type="submit"  value="Connexion" id="btnSendLogin">
+            </form>
+        </div>
+    
+        
+    
+           
+    
+    
+    
+        
+    
+        <div id="modalContact" class="maskContact">
+            <a href="https://www.facebook.com/profile.php?id=100008466600174"><img  class="fb" src="/images/fb.png" width="20%" alt="">Facebook</a>
+            <a class="twitter" href="https://twitter.com/MorganPicard2"><img id="fckTwitter" class="imgContact" src="/images/twitter.png" width="25%" alt=""> Twitter</a>
+            <a href="https://github.com/mangozmorgan" class="gitContact"><img id="fckGit" class="imgContact" src="/images/gitColor.png" width="30%" alt=""> Github</a>
+        </div>
+    
+     
+    
+        
+    
+        
+        <div class="banniere" id="banniere">
+            
+               
+                    
+                        <div id="openVolet" class="openVolet" onclick="volet()"></div>               
+                       
+                
+            <div class="html kill" id="htmlLogo"  ><img id="imgHtml" src="/images/htmlWht.png" width="73%" alt="" srcset=""></div>
+            <div class="css kill"><img id="imgCss" src="/images/cssWht.png" width="73%" alt="" srcset=""></div>
+            <div class="js kill"><img id="imgJs" src="/images/jsWht.png" width="73%" alt="" srcset=""></div>
+        
+            <div class="comp "id="active">
+                <div class="geerAnim">               
+                    <img  src="/images/geer3.png" width="40%" alt="geerAnim" >                           
+                </div>
+                <div class="dedlogo "><img id='dedlogo' src="/images/ded logo.png" width="60%"  alt=""> </div>
+                <div class="atomeOff kill" id="animAtome">
+                    <div class="atome kill"><img src="/images/atome.png" width="20%" alt="" srcset=""></div>            
+                </div>
+                
+                <div class="atomeOff kill" id="animAtome2">
+                    <div class="atome2"><img src="/images/atome.png" width="20%" alt="" srcset=""></div>            
+                </div> 
+    
+            </div>
+            <div class="dedMob"><div class="newLog"><img src="/images/logoIllustrator3.png" width="75%" alt="devLogo" ></div></div>
+            <div class="search"><img src="/images/search.png" width="80%" alt="search" srcset=""></div>
+            <div class="mongo kill"><img id="imgMongo" src="/images/mongoWht.png" width="73%" alt=""></div>
+        
+        <div class="node kill"><img id="imgNode" src="/images/nodeWht.png" width="73%" alt="" srcset=""></div>
+        <div class="git kill" id="git"><img id="imgGit" src="/images/githWht.png" width="73%" alt="" srcset=""></div>
+        </div>
+        
+        
+    <div class="container" id="container">
+        <p class="contenu">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At perspiciatis non amet voluptas beatae asperiores architecto. Id officia a rerum cupiditate natus saepe architecto reprehenderit, nihil similique optio mollitia nulla.
+        Nam cupiditate mollitia quaerat rerum inventore corrupti, consequuntur eveniet nulla nobis optio eligendi aliquam reprehenderit accusantium non soluta corporis! Iusto, tempora assumenda! Labore ipsa recusandae quas a sed, voluptatibus at.
+        Labore soluta ratione incidunt. Deserunt illo non facilis consequuntur a provident reiciendis magni eius perspiciatis! Pariatur fugiat eligendi tenetur id obcaecati? Ab itaque ducimus quaerat! Quaerat, labore aliquid? Fugit, consectetur!
+        Debitis odit consequuntur, cum, illum placeat omnis id adipisci pariatur repellat dolor laudantium! Laudantium dolor eum nisi quam! Labore expedita ad minus exercitationem quaerat porro rerum natus perferendis, possimus tempora.
+        Delectus consequuntur ipsum exercitationem possimus harum magnam itaque distinctio, voluptatibus dicta. Accusamus dolorem, molestiae ad, ducimus repudiandae iure libero sequi cumque dolores illo corrupti animi voluptatem eveniet modi ipsa maiores.
+        Eos in aliquid ex repellat id officiis delectus sequi nesciunt aut, laborum consequatur. Alias libero cupiditate fugiat, necessitatibus nostrum, rem voluptates expedita doloremque animi ut sequi enim? Eius, nisi pariatur.
+        Labore a cupiditate saepe nobis vitae! Quia voluptatibus magni, dolorem qui voluptates laboriosam aliquam, ad vel harum aspernatur laborum similique obcaecati nesciunt eaque sit. Quidem voluptatem accusantium explicabo reprehenderit esse.
+        Velit minima error voluptatibus quo voluptatum sapiente, quam ex deleniti corrupti perferendis laborum placeat earum temporibus possimus voluptates dicta dolores culpa ipsum quod architecto consequatur beatae labore molestias quae. Tempora.
+        Fugiat numquam facilis doloremque commodi aperiam molestiae pariatur illo laudantium vel aliquid. Ratione eum facilis consectetur eos earum totam iusto magni, magnam consequuntur inventore! Aspernatur delectus quibusdam perferendis optio animi!
+        Ut esse ab natus nobis quasi, ea laborum eaque commodi numquam mollitia, reprehenderit error reiciendis consectetur. Beatae ducimus, iure, ex ad porro quas rerum laudantium aperiam in provident sit dolorum?
+        Aperiam, ratione! Molestiae dolores deleniti error eius velit eum quo nulla obcaecati explicabo tenetur incidunt ducimus, voluptatibus cumque iste nemo fugiat commodi perferendis voluptas rerum animi laboriosam. Impedit, voluptates aliquid?
+        Maiores necessitatibus, quasi consequuntur optio dolorem harum totam quos quod officia ratione suscipit fugit corrupti debitis? Dolore excepturi corporis suscipit quis provident alias amet cumque, labore voluptatibus aliquid ratione dolores.
+        Nesciunt reprehenderit quibusdam impedit laboriosam. Vero, tempora. Impedit saepe soluta facere consectetur maiores iste! Suscipit, quisquam. Voluptate explicabo itaque ad corrupti iste totam laborum, recusandae alias, laudantium odio eveniet ipsam!
+        Optio nemo odit officia aliquam pariatur amet expedita quas laborum molestiae minus quisquam atque non ea magni accusamus itaque, doloremque distinctio, inventore quibusdam beatae ipsum consequuntur odio! Porro, maxime et?
+        Suscipit minus deleniti, dolores esse ipsam vel exercitationem dolorum? Culpa quisquam sequi ea mollitia cupiditate nesciunt aspernatur debitis tempora maiores libero, tempore voluptas! Amet sint quisquam doloremque. Atque, impedit temporibus.
+        Expedita, laborum officia! Qui nisi laudantium possimus. Laudantium dolorem laboriosam hic incidunt quasi magni, repellendus non nam quo facere voluptas eveniet, cupiditate sunt? Perspiciatis enim dolore odit? Quo, recusandae dolore.
+        Facere iste tempore necessitatibus laborum veritatis maxime, labore aliquid explicabo minus ut earum, esse provident consectetur repellendus est dignissimos officia? Saepe, illum illo? Magnam autem est ex recusandae, maxime aut.
+        At, corporis quod rerum architecto facere doloremque reiciendis omnis obcaecati accusamus autem ut? Aperiam architecto, doloremque nemo est laboriosam ab vitae dolore sit ipsa laborum voluptatem aspernatur laudantium placeat dicta.
+        Inventore, debitis ratione. Reprehenderit nesciunt neque, inventore ducimus cum, doloremque sequi laborum similique vel qui aperiam voluptas nisi? Nam rerum porro repudiandae. Consequuntur voluptatibus aut ipsa mollitia iste neque. Magnam.
+        Expedita omnis veritatis ullam distinctio eveniet doloribus similique accusantium voluptatem reiciendis perferendis soluta voluptatum repellendus aperiam harum, sed et molestias corrupti vel, cumque sint ad, quam aspernatur dolores at? Molestiae.
+        Minima quibusdam modi possimus laudantium fuga nam iste praesentium aliquid aspernatur quas atque cumque, eaque eius accusantium culpa ipsa voluptatum nisi repudiandae consequatur ut! Dignissimos sequi deleniti quibusdam adipisci quae?
+        Culpa, illo sed, id et, quo cupiditate cumque illum repellat quibusdam corporis consequuntur vel iusto impedit obcaecati odio pariatur. Minus amet ut cupiditate quo magnam aut harum repudiandae, obcaecati vero?
+        Ullam, rerum modi? Corrupti, reiciendis nostrum sequi consequatur est possimus dolore, impedit delectus optio necessitatibus ipsam deserunt. Magni quos adipisci molestiae neque harum, iusto perferendis sunt nulla facere, exercitationem voluptatum?
+        Consequuntur provident ullam fugiat, necessitatibus repellat voluptate, perferendis debitis animi quam a quasi vitae illo similique dolor. Debitis, nihil illo! Adipisci, veniam? Amet optio quo in blanditiis molestiae perspiciatis fugiat.
+        Odio accusamus a facilis. Exercitationem modi maxime mollitia autem, facere nisi eum quam, quia dolorem inventore rerum consectetur aut culpa voluptas pariatur explicabo vero consequuntur! Earum sit esse aperiam odio.
+        Facilis molestiae ipsam quo eaque ipsum? Reprehenderit facere inventore et minima quia cum. Eaque ducimus consequuntur vero expedita aut tenetur voluptate suscipit possimus facere atque quod tempora enim, minus amet.
+        Reiciendis, libero autem. Similique, vel? Maxime porro nesciunt, fuga obcaecati ea similique laborum suscipit voluptatum officia, nam, sit molestiae! Quos eaque culpa vitae nemo vero dicta adipisci excepturi ipsa aliquid!
+        Quaerat atque porro ratione qui ad dolore ea corporis repellat accusamus, suscipit nulla dolorum necessitatibus, excepturi dolores repellendus consectetur aliquam praesentium sed fugiat maiores. Tempore commodi laudantium veritatis facilis nobis.
+        Modi in voluptas soluta nulla vero sed ipsam ratione veniam, quia voluptatem sunt odio quod molestiae dicta nesciunt minima corrupti cumque ducimus eligendi nobis at. Cupiditate earum libero iusto quae?
+        Nesciunt a nemo quisquam hic ex magnam accusamus fuga, aperiam omnis quia dolor aut dolore possimus consequatur, asperiores tempora inventore. Consequuntur quod repudiandae, natus reiciendis sint fugit minima ratione dicta.
+        Nobis accusamus quisquam obcaecati reiciendis eius voluptatum, dolores commodi tempore fuga! Obcaecati, suscipit perspiciatis. Sed cum molestiae amet consequatur, quae accusantium accusamus maiores. Ea, aliquid possimus alias obcaecati dignissimos similique!
+        Dignissimos vero nulla perspiciatis eos, harum repellat voluptatem voluptatibus nihil aperiam. Deserunt temporibus tenetur porro aut dolores modi! Facilis, ad laborum esse assumenda ratione architecto fuga quibusdam aspernatur? Sapiente, maxime.
+        Rem neque porro at voluptate asperiores necessitatibus sapiente in doloremque mollitia. Quos deserunt id recusandae minima, mollitia inventore voluptatem soluta culpa. Tempore eius tenetur autem sit provident. Ad, ullam asperiores!
+        Neque fugit atque necessitatibus possimus earum architecto a consequatur laborum hic velit illum, magni ducimus nihil officiis vel ex, ea dolor aut odit. Debitis dolore sunt rerum eius laborum dicta!
+        Nam labore culpa, alias in quidem sint modi, veniam reiciendis reprehenderit maxime at ducimus possimus? Est odit nemo, dicta minima quidem dolore nobis impedit facere, officiis ipsam, nisi natus soluta.
+        Nesciunt, vero temporibus? Laudantium quos repellendus accusamus est at necessitatibus a vitae eos placeat quidem tempore sunt atque, fuga debitis earum in excepturi odio cum, saepe exercitationem nihil eum vero.
+        Accusamus corrupti quas eum quo explicabo, quidem facere dolor, cum veritatis vel alias numquam tempora iure asperiores at ipsum veniam est, natus voluptatem repudiandae magni aliquam aspernatur! Doloribus, ea soluta?
+        Officiis excepturi culpa ut! Amet tempore assumenda vero minus ratione eos voluptatum. Iure modi porro distinctio optio dolorem nam, quibusdam esse suscipit praesentium! Doloremque ut atque hic sed a nulla.
+        Consequuntur molestias voluptates ducimus, earum rerum eaque aut voluptate, soluta fugiat magnam, nemo odit similique officia eligendi doloribus enim. Corrupti autem excepturi nostrum dolorum nemo nihil, voluptas nobis similique deserunt?
+        Numquam labore, doloremque illo eaque beatae quaerat nobis delectus tempore mollitia fugiat fuga odit voluptatem corrupti officia rem quod repellat, harum ipsum veritatis, tenetur exercitationem dignissimos architecto laborum? Inventore, necessitatibus?
+        Dolorum fugit quis numquam deleniti aut dignissimos ab architecto labore, alias repellat sed atque quo rerum nisi, in quidem quasi possimus, velit fugiat. Expedita id sit magnam dolores ex quasi.
+        Dolorem perspiciatis delectus corrupti sed architecto debitis repellendus amet ad reprehenderit officiis omnis est illum error, fugit nisi fugiat esse soluta asperiores rem nihil! Doloribus tenetur sapiente veniam possimus rerum.
+        Cumque sunt beatae ab, provident minima dolore quae hic, placeat voluptatibus dignissimos nobis! Ut laboriosam eos perferendis accusamus. Dolor atque sint et nemo expedita officia ipsa, amet perferendis illum numquam?
+        Error exercitationem blanditiis, cupiditate modi dolorum eligendi maxime eius dolores est excepturi alias eum itaque rem sequi commodi similique quas fugit eveniet nesciunt nobis deserunt veniam. Voluptates harum qui fugiat!
+        Quibusdam reiciendis tempora iusto distinctio rerum tenetur deserunt ad expedita repellendus provident blanditiis praesentium eius, atque voluptate ab harum. Dignissimos, dolorem non. Minima aperiam est velit omnis obcaecati dolores pariatur?
+        Sunt molestiae qui obcaecati exercitationem error recusandae, ducimus aspernatur ullam deserunt? Corporis, a voluptatibus accusamus rerum possimus illum alias placeat, nostrum soluta tempora inventore. Sunt reprehenderit ea itaque quisquam harum?
+        Nostrum, aspernatur. Magnam, tenetur. Itaque tempore ratione explicabo, at quidem non nobis velit atque hic sequi, tenetur quasi ab enim similique fuga nam officiis natus rerum numquam aut quis excepturi.
+        Ad nesciunt cum eius, sed error delectus mollitia excepturi voluptates, tempora sapiente recusandae eligendi dolor, inventore illum neque dicta ducimus autem dolorum unde aperiam asperiores nisi ex maiores labore? Deserunt?
+        Nesciunt animi minus exercitationem. Aliquid error, at minus consequatur maxime, culpa eligendi cum ipsa illo ut voluptatibus placeat molestiae pariatur beatae rerum porro sed tenetur tempora incidunt iste, hic adipisci?
+        Reiciendis unde blanditiis velit aperiam ad non, eum ratione autem quae. Et, aliquid quis. Quasi sit molestiae cupiditate deserunt. Et aliquid, commodi consequatur rerum expedita autem tempore quam laborum fugit!p>
+    </div>
+
+
+
+<script src="followTheme.js"></script>
+<script src="effect.js"></script>
+<script src="cookies.js"></script>
+<script src="themeController.js"></script>
+</body>
+</html>

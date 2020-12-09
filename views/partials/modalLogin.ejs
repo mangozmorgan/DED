@@ -1,0 +1,13 @@
+<div class="divLogin" id="divLogin">
+           
+    <form class="maskLogin" id="modalLogin" action="/login" method="post">
+        <h2>Connexion</h2>
+        <label for="mail">Adresse Email :</label>
+        <input type="email" name="mail" id="mail">
+        <label for="pwdLogin">Mot de passe :</label>
+        <input type="password" name="pwdLogin" id="pwdLogin">
+        <span id="errorLogin"></span>
+        <input type="submit" onclick="killErrors()"  value="Connexion" id="btnSendLogin">
+        <input type="button" onclick="killErrors()"  value="Annuler" id="btnAnnulLogin">
+    </form>
+</div>

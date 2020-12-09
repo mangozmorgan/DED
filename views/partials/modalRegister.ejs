@@ -1,0 +1,24 @@
+<div class="maskRegister" id="modalRegister">
+    <form class="login" action="/register" method="post">
+        <h2>Inscription rapide</h2>
+        <label for="login">Nom d'utilisateur :</label>
+        <input class="inputForm" type="text" name="pseudo" id="pseudo">
+        <label for="Email">Adresse email :</label>
+        <input class="inputForm" type="email" name="email" id="email">
+        <label for="pwd">Mot de passe :</label>
+        <input class="inputForm" type="password" name="pwd" id="pwd">
+        <label for="pwdConfirm">Confirmation du mot de passe :</label>
+        <input class="inputForm" type="password" name="pwdConfirm" id="pwdConfirm">
+        <span class="error" id="errorMessage"></span>
+        <span class="error" id="errorMessage1"></span>
+        <span class="error" id="errorMessage2"></span>
+        <span class="error" id="errorMessage2"></span>
+        <span class="error" id="errorMessage3"></span>
+        <span class="error" id="errorMessage4"></span>
+        <div class="containBtn">
+            <input class="inscr" onclick="killErrorCookie()" type="submit" value="S'inscrire">
+            <input class="annul" onclick="annul()" type="button" value="Annuler">
+        </div>    
+    </form>
+</div>
+

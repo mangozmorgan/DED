@@ -1,0 +1,17 @@
+<div id="modalSubject" class="offCreate">
+    <form id="formSubject" action="/postQuestions" class="formSubject" method="post" enctype="multipart/form-data">
+        
+        <h2 id="titleForm">Créer un nouveau sujet</h2>
+        <label id="titleForm1" for="titre">Titre du sujet</label>
+        <textarea  type="text" name="title" rows="0" cols="60"  id="titleSubject"></textarea>                    
+        <label id="titleForm2" class="titleForm" for="sujet">Commentaires</label>
+        <textarea  name="sujet" class="commentSubject" rows="10" cols="60"></textarea>
+        <input type="file" name="upload" id="uploadBtn">
+        <div class="createControl">
+            <input class="createBtn" id="okCreate" type="submit" value="Créer">
+            <input id="cancelCreate" type="button" value="Annuler">
+
+        </div>
+        
+    </form>
+</div>
